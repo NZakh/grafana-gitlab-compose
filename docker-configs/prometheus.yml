@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'mysql'
+    static_configs:
+      - targets: ['mysql-container:9104']
+  - job_name: 'node'
+    static_configs:
+      - targets: ['node-exporter-container:9100']
